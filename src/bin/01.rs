@@ -67,7 +67,6 @@ pub fn part_two(_input: &str) -> Option<u32> {
     nums_left.iter().for_each(|&ele| {
         let sum_right = nums_right.iter().filter(|&&e| e == ele).count() as u32;
         sum += sum_right * ele;
-        println!("{:?}", sum_right * ele);
     });
     Some(sum)
 }
